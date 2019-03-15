@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+	UIViewController * vc = [[UIViewController alloc] init];
+	vc.view.backgroundColor = [UIColor yellowColor];
+	UIViewController * vc2 = [[UIViewController alloc] init];
+	vc2.view.backgroundColor = [UIColor orangeColor];
+	SNDrawerViewController *SNDrawerVC = [[SNDrawerViewController alloc] initWithMainViewController:vc leftViewController:vc2];
+	/* configure your drawer */
+	
+	[self addChildViewController:SNDrawerVC];
+	[self.view addSubview:SNDrawerVC.view];
 	
 	
 	

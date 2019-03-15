@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "MainViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -19,10 +21,8 @@
     // Override point for customization after application launch.
 	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	self.window.backgroundColor = COLOR_BACK;
-	
-#pragma mark -- 测试用例,用户测试使用环境选择
-	self.window.rootViewController = [[UIViewController alloc] init];
-	[SNMediator mediateModule:kPublic url:nil action:kNativeFetchPublicViewController params:nil shouldCacheTarget:NO];
+
+	self.window.rootViewController = [[MainViewController alloc] init];
 	[self.window makeKeyAndVisible];
     return YES;
 }

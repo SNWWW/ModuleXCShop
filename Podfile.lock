@@ -35,6 +35,7 @@ PODS:
   - SNDBManager (0.0.4):
     - FMDB/FTS
   - SNDownTimer (0.0.8)
+  - SNDrawerViewController (0.1.1)
   - SNFileManager (0.0.1)
   - SNFoundation (0.0.4)
   - SNImageBrowserViewController (0.0.3):
@@ -252,6 +253,7 @@ PODS:
   - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
+  - SNDrawerViewController
   - SNModuleKit
 
 SPEC REPOS:
@@ -272,6 +274,7 @@ SPEC REPOS:
     - SNBadgeView
     - SNDBManager
     - SNDownTimer
+    - SNDrawerViewController
     - SNFileManager
     - SNFoundation
     - SNImageBrowserViewController
@@ -303,6 +306,7 @@ SPEC CHECKSUMS:
   SNBadgeView: 22655e5fc32a37a36e1f138ebd741e0545cf5076
   SNDBManager: 33fd3b71ae33ef08f6eebe918bb4f5fea6fa57c0
   SNDownTimer: ff047bcda4943f3e519953200a433d993add7383
+  SNDrawerViewController: ce9543f5bf44ed3057e7cc8c242062e733d68aa8
   SNFileManager: 5afd2c2268e1125fef814d97c65c58b94488bdfe
   SNFoundation: dc9691581e4e744e50b1505a53d659b1197073b5
   SNImageBrowserViewController: c5f02681da343593cb6574d1b8bf0920139b682a
@@ -317,6 +321,6 @@ SPEC CHECKSUMS:
   SNWebViewController: 3050f0e330bfbb67bd84c2c204f3d4286844fef1
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
-PODFILE CHECKSUM: 59871615ade7ccd60b7d0d3657ea81fb92623a9e
+PODFILE CHECKSUM: d7db6037c63ff14a729b05792db624a19e63bb1a
 
 COCOAPODS: 1.6.0.beta.2

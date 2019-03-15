@@ -7,6 +7,7 @@ target 'ModuleXCShop' do
 
   # Pods for ModuleXCShop
   pod 'SNModuleKit'
+	pod 'SNDrawerViewController'
 
   target 'ModuleXCShopTests' do
     inherit! :search_paths
