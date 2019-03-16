@@ -16,5 +16,6 @@
 #import "SNDrawerFramework.h"
 
 #import "UtilsMacro.h"
+#import "SNNetworking+Group.h"
 
 #endif /* PrefixHeader_pch */

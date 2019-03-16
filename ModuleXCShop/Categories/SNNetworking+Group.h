@@ -12,7 +12,14 @@
 
 //http://apis.juhe.cn/cook/query.php
 
-//+ (RACSignal *)
+
+/**
+ 菜谱
+
+ @param menu 类目
+ @param pn 当前页
+ */
++ (RACSignal *)cookmenu:(NSString *)menu pageNumber:(NSString *)pn success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure;
 
 @end
 

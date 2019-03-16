@@ -22,6 +22,8 @@
 @property (nonatomic, strong) CookViewController * cook;
 @property (nonatomic, strong) TodayViewController * today;
 
+@property (nonatomic, strong) UIButton * buttonMenu;
+
 @end
 
 @implementation MainViewController
@@ -58,27 +60,30 @@
 	[self addChildViewController:drawer];
 	[self.view addSubview:drawer.view];
 	
-	UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-	button.frame = CGRectMake(0, 0, 100, 100);
-	button.center = CGPointMake(100, 100);
-	button.backgroundColor = [UIColor redColor];
-	[self.view addSubview:button];
+	[self.view addSubview:self.buttonMenu];
 	
 	
-	[[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-		if (x.selected) {
-			x.selected = NO;
-			[drawer closeLeftDrawer];
-		} else {
-			x.selected = YES;
-			[drawer openLeftDrawer];
-		}
+	[[self.buttonMenu rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+//		if (x.selected) {
+//			x.selected = NO;
+//			[drawer closeLeftDrawer];
+//		} else {
+//			x.selected = YES;
+//			[drawer openLeftDrawer];
+//		}
+		[[SNNetworking cookmenu:@"菜" pageNumber:@"1" success:^(id responseObject) {
+			NSLog(@"-- -- -%@",responseObject);
+		} failure:^(NSError *error) {
+			NSLog(@" -- %@",error);
+		}] subscribeNext:^(id  _Nullable x) {
+			NSLog(@"%@",x[@"resultcode"]);
+		}];
 	}];
 	
 	
 	[[self.menu.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
 		[drawer closeLeftDrawer];
-		button.selected = NO;
+		self.buttonMenu.selected = NO;
 		
 		if (x.selected) {
 			x.selected = NO;
@@ -130,6 +135,15 @@
 	if (!_today) {
 		_today = [[TodayViewController alloc] init];
 	} return _today;
+}
+
+- (UIButton *)buttonMenu {
+	if (!_buttonMenu) {
+		_buttonMenu = [UIButton buttonWithType:UIButtonTypeCustom];
+		_buttonMenu.frame = CGRectMake(0, 0, 100, 100);
+		_buttonMenu.center = CGPointMake(100, 100);
+		_buttonMenu.backgroundColor = [UIColor redColor];
+	} return _buttonMenu;
 }
 
 @end
