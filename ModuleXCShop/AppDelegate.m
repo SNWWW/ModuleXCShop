@@ -24,6 +24,7 @@
 
 	self.window.rootViewController = [[MainViewController alloc] init];
 	[self.window makeKeyAndVisible];
+	[IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     return YES;
 }
 

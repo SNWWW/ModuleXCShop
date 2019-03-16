@@ -64,23 +64,25 @@
 	
 	
 	[[self.buttonMenu rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-//		if (x.selected) {
-//			x.selected = NO;
-//			[drawer closeLeftDrawer];
-//		} else {
-//			x.selected = YES;
-//			[drawer openLeftDrawer];
-//		}
-		[[SNNetworking cookmenu:@"菜" pageNumber:@"1" success:^(id responseObject) {
-			NSLog(@"-- -- -%@",responseObject);
-		} failure:^(NSError *error) {
-			NSLog(@" -- %@",error);
-		}] subscribeNext:^(id  _Nullable x) {
-			NSLog(@"%@",x[@"resultcode"]);
-		}];
+		[self.view endEditing:NO];
+		if (x.selected) {
+			x.selected = NO;
+			[drawer closeLeftDrawer];
+		} else {
+			x.selected = YES;
+			[drawer openLeftDrawer];
+		}
 	}];
-	
-	
+	[RACObserve(drawer, drawerState) subscribeNext:^(id  _Nullable x) {
+		if (drawer.drawerState == SNDrawerViewStateNone) {
+			self.buttonMenu.selected = NO;
+		} else {
+			self.buttonMenu.selected = YES;
+		}
+	}];
+	[drawer.gestureOfOpeningLeftDrawer.rac_gestureSignal subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+		[self.view endEditing:NO];
+	}];
 	[[self.menu.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
 		[drawer closeLeftDrawer];
 		self.buttonMenu.selected = NO;

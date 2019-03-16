@@ -20,6 +20,7 @@
     
     // update form data
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -49,7 +50,14 @@
     
 }
 - (void)updateDataSource {
-    
+	
+//	[[SNNetworking cookmenu:@"菜" pageNumber:@"1" success:^(id responseObject) {
+//		NSLog(@"-- -- -%@",responseObject);
+//	} failure:^(NSError *error) {
+//		NSLog(@" -- %@",error);
+//	}] subscribeNext:^(id  _Nullable x) {
+//		NSLog(@"%@",x[@"resultcode"]);
+//	}];
 }
 
 #pragma mark -- getter setter

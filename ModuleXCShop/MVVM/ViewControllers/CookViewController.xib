@@ -19,15 +19,27 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d1-Lt-ulj">
-                    <rect key="frame" x="166" y="329" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <searchBar contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="xOC-02-rdX">
+                    <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f6q-bZ-PkW">
+                    <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="f6q-bZ-PkW" secondAttribute="bottom" id="9fi-5y-ey5"/>
+                <constraint firstItem="f6q-bZ-PkW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E4P-tv-KqM"/>
+                <constraint firstItem="xOC-02-rdX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Elz-OZ-vB9"/>
+                <constraint firstItem="xOC-02-rdX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="Slx-8g-Rr6"/>
+                <constraint firstItem="f6q-bZ-PkW" firstAttribute="top" secondItem="xOC-02-rdX" secondAttribute="bottom" id="aSV-N2-6jp"/>
+                <constraint firstAttribute="trailing" secondItem="f6q-bZ-PkW" secondAttribute="trailing" id="vXR-rq-EUU"/>
+                <constraint firstAttribute="trailing" secondItem="xOC-02-rdX" secondAttribute="trailing" id="x2r-Xf-N6J"/>
+            </constraints>
         </view>
     </objects>
 </document>
