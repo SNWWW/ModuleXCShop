@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet UIButton *buttonCook;
+@property (weak, nonatomic) IBOutlet UILabel *labelCook;
+@property (weak, nonatomic) IBOutlet UIButton *buttonToday;
+@property (weak, nonatomic) IBOutlet UILabel *labelToday;
 
 @end

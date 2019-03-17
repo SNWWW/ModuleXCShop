@@ -1,14 +1,14 @@
 //
-//  TableViewCell.m
+//  TodayCell.m
 //  ModuleXCShop
 //
-//  Created by snlo on 2019/3/16.
+//  Created by snlo on 2019/3/17.
 //  Copyright © 2019 XCShop. All rights reserved.
 //
 
-#import "TableViewCell.h"
+#import "TodayCell.h"
 
-@implementation TableViewCell
+@implementation TodayCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

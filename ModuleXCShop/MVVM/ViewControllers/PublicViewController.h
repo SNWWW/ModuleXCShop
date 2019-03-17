@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CookViewController.h"
+#import "TodayViewController.h"
+
 @interface PublicViewController : UIViewController
+
+@property (nonatomic, strong) CookViewController * cook;
+@property (nonatomic, strong) TodayViewController * today;
 
 @end
 

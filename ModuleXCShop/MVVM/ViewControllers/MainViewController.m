@@ -11,18 +11,15 @@
 #import "PublicViewController.h"
 #import "MenuViewController.h"
 
-#import "CookViewController.h"
-#import "TodayViewController.h"
-
 @interface MainViewController ()
+
+@property (nonatomic, strong) SNDrawerViewController * drawer;
 
 @property (nonatomic, strong) PublicViewController * public;
 @property (nonatomic, strong) MenuViewController * menu;
 
 @property (nonatomic, strong) CookViewController * cook;
 @property (nonatomic, strong) TodayViewController * today;
-
-@property (nonatomic, strong) UIButton * buttonMenu;
 
 @end
 
@@ -56,54 +53,54 @@
 #pragma mark -- private methods
 - (void)configureUserInterface {
 	
-	SNDrawerViewController * drawer = [[SNDrawerViewController alloc] initWithMainViewController:self.public leftViewController:self.menu];
-	[self addChildViewController:drawer];
-	[self.view addSubview:drawer.view];
+	[self addChildViewController:self.drawer];
 	
-	[self.view addSubview:self.buttonMenu];
-	
-	
-	[[self.buttonMenu rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-		[self.view endEditing:NO];
-		if (x.selected) {
-			x.selected = NO;
-			[drawer closeLeftDrawer];
-		} else {
-			x.selected = YES;
-			[drawer openLeftDrawer];
-		}
-	}];
-	[RACObserve(drawer, drawerState) subscribeNext:^(id  _Nullable x) {
-		if (drawer.drawerState == SNDrawerViewStateNone) {
-			self.buttonMenu.selected = NO;
-		} else {
-			self.buttonMenu.selected = YES;
-		}
-	}];
-	[drawer.gestureOfOpeningLeftDrawer.rac_gestureSignal subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+	[self.cook.subjectMenu subscribeNext:^(id  _Nullable x) {
+		[self.drawer openLeftDrawer];
 		[self.view endEditing:NO];
 	}];
-	[[self.menu.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-		[drawer closeLeftDrawer];
-		self.buttonMenu.selected = NO;
+	[self.today.subjectMenu subscribeNext:^(id  _Nullable x) {
+		[self.drawer openLeftDrawer];
+	}];
+	
+	[self.drawer.gestureOfOpeningLeftDrawer.rac_gestureSignal subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
+		[self.view endEditing:NO];
+	}];
+	
+	[[self.menu.buttonCook rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+		[self.drawer closeLeftDrawer];
 		
-		if (x.selected) {
-			x.selected = NO;
-			
-			[self.public addChildViewController:self.today];
-			[self.public.view addSubview:self.today.view];
-			self.today.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-		} else {
-			x.selected = YES;
-			
-			[self.public addChildViewController:self.cook];
-			[self.public.view addSubview:self.cook.view];
-			self.cook.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-		}
+		[self.public.childViewControllers makeObjectsPerformSelector:@selector(removeFromParentViewController)];
+		[self.public.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+		
+		[self.public addChildViewController:self.cook];
+		[self.public.view addSubview:self.cook.view];
+//		self.cook.view.alpha = 0;
+		self.cook.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+//		[UIView animateWithDuration:0.3 animations:^{
+//			[self.public.view.subviews makeObjectsPerformSelector:@selector(setAlpha:) withObject:0];
+//			self.cook.view.alpha = 1;
+//		} completion:^(BOOL finished) {
+//
+//		}];
+		
 	}];
-	
-	
-	
+	[[self.menu.buttonToday rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+		[self.drawer closeLeftDrawer];
+		
+		[self.public.childViewControllers makeObjectsPerformSelector:@selector(removeFromParentViewController)];
+		[self.public.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+		
+		[self.public addChildViewController:self.today];
+		[self.public.view addSubview:self.today.view];
+		self.today.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+		[UIView animateWithDuration:0.3 animations:^{
+			
+		} completion:^(BOOL finished) {
+			
+		}];
+		
+	}];
 }
 - (void)configureDataSource {
 	
@@ -116,9 +113,20 @@
 
 #pragma mark -- getter setter
 
+- (SNDrawerViewController *)drawer {
+	if (!_drawer) {
+		_drawer = [[SNDrawerViewController alloc] initWithMainViewController:self.public leftViewController:self.menu];
+		_drawer.drawerWidth = SCREEN_WIDTH*0.2;
+		_drawer.drawerScale = 1;
+		[self.view addSubview:_drawer.view];
+	} return _drawer;
+}
+
 - (PublicViewController *)public {
 	if (!_public) {
 		_public = [[PublicViewController alloc] init];
+		_public.cook = self.cook;
+		_public.today = self.today;
 	} return _public;
 }
 - (MenuViewController *)menu {
@@ -139,13 +147,5 @@
 	} return _today;
 }
 
-- (UIButton *)buttonMenu {
-	if (!_buttonMenu) {
-		_buttonMenu = [UIButton buttonWithType:UIButtonTypeCustom];
-		_buttonMenu.frame = CGRectMake(0, 0, 100, 100);
-		_buttonMenu.center = CGPointMake(100, 100);
-		_buttonMenu.backgroundColor = [UIColor redColor];
-	} return _buttonMenu;
-}
 
 @end

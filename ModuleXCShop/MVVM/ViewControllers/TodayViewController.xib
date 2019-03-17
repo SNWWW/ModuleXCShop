@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodayViewController">
             <connections>
+                <outlet property="buttonMenu" destination="mJu-G9-JLb" id="j5b-Mw-2YD"/>
+                <outlet property="labelDay" destination="0sK-Nc-hoy" id="PZO-Sc-CWV"/>
+                <outlet property="tableView" destination="P4L-Oh-iST" id="lDF-jz-6mA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,12 +22,53 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQB-je-mry">
-                    <rect key="frame" x="163" y="318" width="49" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roV-50-Khi">
+                    <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJu-G9-JLb">
+                            <rect key="frame" x="16" y="12" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="WTy-Zq-0rl"/>
+                                <constraint firstAttribute="width" constant="32" id="qub-VU-I8d"/>
+                            </constraints>
+                            <state key="normal" image="menu"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sK-Nc-hoy">
+                            <rect key="frame" x="60" y="18" width="299" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mJu-G9-JLb" firstAttribute="leading" secondItem="roV-50-Khi" secondAttribute="leading" constant="16" id="6Dh-6Q-hyR"/>
+                        <constraint firstAttribute="trailing" secondItem="0sK-Nc-hoy" secondAttribute="trailing" constant="16" id="HdK-gz-ub9"/>
+                        <constraint firstAttribute="height" constant="56" id="RFi-rR-Uu7"/>
+                        <constraint firstItem="0sK-Nc-hoy" firstAttribute="leading" secondItem="mJu-G9-JLb" secondAttribute="trailing" constant="12" id="WME-mt-6fL"/>
+                        <constraint firstItem="mJu-G9-JLb" firstAttribute="centerY" secondItem="roV-50-Khi" secondAttribute="centerY" id="e7M-Sr-eR0"/>
+                        <constraint firstItem="0sK-Nc-hoy" firstAttribute="centerY" secondItem="roV-50-Khi" secondAttribute="centerY" id="q0I-AK-Sqn"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P4L-Oh-iST">
+                    <rect key="frame" x="0.0" y="20" width="375" height="591"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="roV-50-Khi" firstAttribute="top" secondItem="P4L-Oh-iST" secondAttribute="bottom" id="2g3-ig-UVh"/>
+                <constraint firstItem="P4L-Oh-iST" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="2iV-dw-xuy"/>
+                <constraint firstAttribute="bottomMargin" secondItem="roV-50-Khi" secondAttribute="bottom" id="7B1-0v-fil"/>
+                <constraint firstAttribute="trailing" secondItem="P4L-Oh-iST" secondAttribute="trailing" id="9OX-3F-zse"/>
+                <constraint firstItem="roV-50-Khi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YMn-Zq-x38"/>
+                <constraint firstItem="P4L-Oh-iST" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oB9-cy-Dml"/>
+                <constraint firstAttribute="trailing" secondItem="roV-50-Khi" secondAttribute="trailing" id="yeQ-Ak-QEs"/>
+            </constraints>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
         </view>
     </objects>
+    <resources>
+        <image name="menu" width="512" height="512"/>
+    </resources>
 </document>

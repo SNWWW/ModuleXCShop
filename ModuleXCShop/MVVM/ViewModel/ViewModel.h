@@ -10,4 +10,6 @@
 
 @interface ViewModel : NSObject
 
+- (NSDateComponents *)date:(NSString **)weekday;
+
 @end

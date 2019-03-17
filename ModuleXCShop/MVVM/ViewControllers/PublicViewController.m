@@ -7,11 +7,9 @@
 //
 
 #import "PublicViewController.h"
-#import "CookViewController.h"
-#import "TodayViewController.h"
+
 @interface PublicViewController ()
-@property (nonatomic, strong) CookViewController * cook;
-@property (nonatomic, strong) TodayViewController * today;
+
 @end
 
 @implementation PublicViewController
@@ -19,24 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	
 	[self addChildViewController:self.cook];
 	[self.view addSubview:self.cook.view];
 	self.cook.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	
-	
-}
-
-
-- (CookViewController *)cook {
-	if (!_cook) {
-		_cook = [[CookViewController alloc] init];
-	} return _cook;
-}
-- (TodayViewController *)today {
-	if (!_today) {
-		_today = [[TodayViewController alloc] init];
-	} return _today;
+	self.view.backgroundColor = [UIColor whiteColor];
 }
 
 @end

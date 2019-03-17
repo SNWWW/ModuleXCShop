@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="419" id="KGk-i7-Jjw" customClass="CookDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="419"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="418.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yS-SH-Gtt">
+                        <rect key="frame" x="0.0" y="199" width="320" height="219.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-Fr-Rz8">
+                        <rect key="frame" x="24" y="8" width="272" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AT9-cz-qev">
+                        <rect key="frame" x="32" y="33" width="256" height="158"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="AT9-cz-qev" secondAttribute="height" multiplier="1000:618" id="HeA-i2-TVn"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="sn_radius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AT9-cz-qev" firstAttribute="top" secondItem="6fl-Fr-Rz8" secondAttribute="bottom" constant="8" id="5Ig-fh-yrX"/>
+                    <constraint firstItem="AT9-cz-qev" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="6so-d0-N8C"/>
+                    <constraint firstItem="6fl-Fr-Rz8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="EtX-RF-oSe"/>
+                    <constraint firstAttribute="trailing" secondItem="6fl-Fr-Rz8" secondAttribute="trailing" constant="24" id="Fss-SU-gP9"/>
+                    <constraint firstItem="5yS-SH-Gtt" firstAttribute="top" secondItem="AT9-cz-qev" secondAttribute="bottom" constant="8" id="UbQ-Hs-ZIC"/>
+                    <constraint firstAttribute="bottom" secondItem="5yS-SH-Gtt" secondAttribute="bottom" id="VT6-nA-OsC"/>
+                    <constraint firstAttribute="trailing" secondItem="AT9-cz-qev" secondAttribute="trailing" priority="750" constant="32" id="jpi-O4-wgS"/>
+                    <constraint firstItem="6fl-Fr-Rz8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="okN-vH-jIw"/>
+                    <constraint firstAttribute="trailing" secondItem="5yS-SH-Gtt" secondAttribute="trailing" id="rOy-lw-zfe"/>
+                    <constraint firstItem="5yS-SH-Gtt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wMp-cu-jud"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iamgeViewConten" destination="AT9-cz-qev" id="MMG-8G-n7L"/>
+                <outlet property="labelTitle" destination="6fl-Fr-Rz8" id="bh0-ya-dql"/>
+            </connections>
+            <point key="canvasLocation" x="-1406" y="-70"/>
+        </tableViewCell>
+    </objects>
+</document>

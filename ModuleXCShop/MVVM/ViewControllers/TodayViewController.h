@@ -10,4 +10,9 @@
 
 @interface TodayViewController : UIViewController
 
+@property (nonatomic, strong) RACSubject * subjectMenu;
+@property (weak, nonatomic) IBOutlet UILabel *labelDay;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
 @end

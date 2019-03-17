@@ -21,5 +21,13 @@
  */
 + (RACSignal *)cookmenu:(NSString *)menu pageNumber:(NSString *)pn success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure;
 
+/**
+ 历史
+
+ @param month 月份
+ @param day 日期
+ */
++ (RACSignal *)todaymonth:(NSString *)month day:(NSString *)day success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure;
+
 @end
 

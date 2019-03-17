@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E461AC4223DEFC9006D7F34 /* CFYShowPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E461ABF223DEFC9006D7F34 /* CFYShowPlaceholderView.m */; };
+		5E461AC5223DEFC9006D7F34 /* UIView+CFYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E461AC2223DEFC9006D7F34 /* UIView+CFYExtension.m */; };
+		5E461AC6223DEFC9006D7F34 /* UITableView+CFYTableVIewNoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E461AC3223DEFC9006D7F34 /* UITableView+CFYTableVIewNoData.m */; };
+		5E461AC9223DF39E006D7F34 /* UIViewController+Public.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E461AC8223DF39E006D7F34 /* UIViewController+Public.m */; };
+		5E461ACD223DF43F006D7F34 /* PublicNetFailedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E461ACB223DF43F006D7F34 /* PublicNetFailedView.m */; };
+		5E461ACE223DF43F006D7F34 /* PublicNetFailedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E461ACC223DF43F006D7F34 /* PublicNetFailedView.xib */; };
 		5E7C74BE223C138100B2EB61 /* SNNetworking+Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C74BD223C138100B2EB61 /* SNNetworking+Group.m */; };
-		5E7C74D9223C200E00B2EB61 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C74D7223C200E00B2EB61 /* TableViewCell.m */; };
-		5E7C74DA223C200E00B2EB61 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C74D8223C200E00B2EB61 /* TableViewCell.xib */; };
 		5E7C74DD223C203F00B2EB61 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C74DC223C203F00B2EB61 /* ViewModel.m */; };
 		5E7C74E0223C205100B2EB61 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C74DF223C205100B2EB61 /* Model.m */; };
 		5E7C74F2223C20AA00B2EB61 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C74E7223C20AA00B2EB61 /* TodayViewController.m */; };
@@ -20,6 +24,16 @@
 		5E7C74F8223C20AA00B2EB61 /* CookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C74ED223C20AA00B2EB61 /* CookViewController.m */; };
 		5E7C74F9223C20AA00B2EB61 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C74EE223C20AA00B2EB61 /* MenuViewController.m */; };
 		5E7C74FC223C217800B2EB61 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C74FB223C217800B2EB61 /* MainViewController.m */; };
+		5EF59935223DB5AC00759D64 /* CookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF59933223DB5AC00759D64 /* CookCell.m */; };
+		5EF59936223DB5AC00759D64 /* CookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF59934223DB5AC00759D64 /* CookCell.xib */; };
+		5EF5993A223DC9A800759D64 /* CookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF59938223DC9A800759D64 /* CookDetailViewController.m */; };
+		5EF5993B223DC9A800759D64 /* CookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF59939223DC9A800759D64 /* CookDetailViewController.xib */; };
+		5EF5993F223DCDD000759D64 /* CookDetailHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5993D223DCDD000759D64 /* CookDetailHeaderCell.m */; };
+		5EF59940223DCDD000759D64 /* CookDetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF5993E223DCDD000759D64 /* CookDetailHeaderCell.xib */; };
+		5EF59944223DCDE300759D64 /* CookDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF59942223DCDE300759D64 /* CookDetailCell.m */; };
+		5EF59945223DCDE300759D64 /* CookDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF59943223DCDE300759D64 /* CookDetailCell.xib */; };
+		5EF59949223DDB2300759D64 /* TodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF59947223DDB2300759D64 /* TodayCell.m */; };
+		5EF5994A223DDB2300759D64 /* TodayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF59948223DDB2300759D64 /* TodayCell.xib */; };
 		73362B2A8914B550DCB6AD21 /* libPods-ModuleXCShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 157DD8A1BA78060B7FF2CD2D /* libPods-ModuleXCShop.a */; };
 		98AC12CD223BA7C4000E2A5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98AC12CC223BA7C4000E2A5B /* AppDelegate.m */; };
 		98AC12D0223BA7C4000E2A5B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98AC12CF223BA7C4000E2A5B /* ViewController.m */; };
@@ -54,13 +68,21 @@
 		0436228E9B92A805BA703DB4 /* Pods-ModuleXCShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleXCShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-ModuleXCShopUITests/Pods-ModuleXCShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DF4DF48DE8F107CCB871C26 /* libPods-ModuleXCShopUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ModuleXCShopUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		157DD8A1BA78060B7FF2CD2D /* libPods-ModuleXCShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ModuleXCShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E461ABE223DEFC9006D7F34 /* UIView+CFYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CFYExtension.h"; sourceTree = "<group>"; };
+		5E461ABF223DEFC9006D7F34 /* CFYShowPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFYShowPlaceholderView.m; sourceTree = "<group>"; };
+		5E461AC0223DEFC9006D7F34 /* UITableView+CFYTableVIewNoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CFYTableVIewNoData.h"; sourceTree = "<group>"; };
+		5E461AC1223DEFC9006D7F34 /* CFYShowPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFYShowPlaceholderView.h; sourceTree = "<group>"; };
+		5E461AC2223DEFC9006D7F34 /* UIView+CFYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CFYExtension.m"; sourceTree = "<group>"; };
+		5E461AC3223DEFC9006D7F34 /* UITableView+CFYTableVIewNoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CFYTableVIewNoData.m"; sourceTree = "<group>"; };
+		5E461AC7223DF39E006D7F34 /* UIViewController+Public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Public.h"; sourceTree = "<group>"; };
+		5E461AC8223DF39E006D7F34 /* UIViewController+Public.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Public.m"; sourceTree = "<group>"; };
+		5E461ACA223DF43F006D7F34 /* PublicNetFailedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicNetFailedView.h; sourceTree = "<group>"; };
+		5E461ACB223DF43F006D7F34 /* PublicNetFailedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicNetFailedView.m; sourceTree = "<group>"; };
+		5E461ACC223DF43F006D7F34 /* PublicNetFailedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicNetFailedView.xib; sourceTree = "<group>"; };
 		5E7C74AD223BFA7800B2EB61 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5E7C74BC223C138100B2EB61 /* SNNetworking+Group.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNNetworking+Group.h"; sourceTree = "<group>"; };
 		5E7C74BD223C138100B2EB61 /* SNNetworking+Group.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SNNetworking+Group.m"; sourceTree = "<group>"; };
 		5E7C74BF223C13CA00B2EB61 /* UtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
-		5E7C74D6223C200E00B2EB61 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
-		5E7C74D7223C200E00B2EB61 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
-		5E7C74D8223C200E00B2EB61 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		5E7C74DB223C203F00B2EB61 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		5E7C74DC223C203F00B2EB61 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		5E7C74DE223C205100B2EB61 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
@@ -78,6 +100,21 @@
 		5E7C74F1223C20AA00B2EB61 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		5E7C74FA223C217800B2EB61 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5E7C74FB223C217800B2EB61 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5EF59932223DB5AC00759D64 /* CookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookCell.h; sourceTree = "<group>"; };
+		5EF59933223DB5AC00759D64 /* CookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookCell.m; sourceTree = "<group>"; };
+		5EF59934223DB5AC00759D64 /* CookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CookCell.xib; sourceTree = "<group>"; };
+		5EF59937223DC9A800759D64 /* CookDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookDetailViewController.h; sourceTree = "<group>"; };
+		5EF59938223DC9A800759D64 /* CookDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookDetailViewController.m; sourceTree = "<group>"; };
+		5EF59939223DC9A800759D64 /* CookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CookDetailViewController.xib; sourceTree = "<group>"; };
+		5EF5993C223DCDD000759D64 /* CookDetailHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookDetailHeaderCell.h; sourceTree = "<group>"; };
+		5EF5993D223DCDD000759D64 /* CookDetailHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookDetailHeaderCell.m; sourceTree = "<group>"; };
+		5EF5993E223DCDD000759D64 /* CookDetailHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CookDetailHeaderCell.xib; sourceTree = "<group>"; };
+		5EF59941223DCDE300759D64 /* CookDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookDetailCell.h; sourceTree = "<group>"; };
+		5EF59942223DCDE300759D64 /* CookDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookDetailCell.m; sourceTree = "<group>"; };
+		5EF59943223DCDE300759D64 /* CookDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CookDetailCell.xib; sourceTree = "<group>"; };
+		5EF59946223DDB2300759D64 /* TodayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayCell.h; sourceTree = "<group>"; };
+		5EF59947223DDB2300759D64 /* TodayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayCell.m; sourceTree = "<group>"; };
+		5EF59948223DDB2300759D64 /* TodayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCell.xib; sourceTree = "<group>"; };
 		6BA5C41477BCD267F69262C3 /* Pods-ModuleXCShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleXCShopTests.debug.xcconfig"; path = "Target Support Files/Pods-ModuleXCShopTests/Pods-ModuleXCShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D768EF6AA8EA60C38BB4F66 /* libPods-ModuleXCShopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ModuleXCShopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9542C6A5805A13E206ACBE0C /* Pods-ModuleXCShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleXCShop.release.xcconfig"; path = "Target Support Files/Pods-ModuleXCShop/Pods-ModuleXCShop.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,11 +177,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E461ABD223DEFC9006D7F34 /* PublicTableViewNoDataView */ = {
+			isa = PBXGroup;
+			children = (
+				5E461AC1223DEFC9006D7F34 /* CFYShowPlaceholderView.h */,
+				5E461ABF223DEFC9006D7F34 /* CFYShowPlaceholderView.m */,
+				5E461ABE223DEFC9006D7F34 /* UIView+CFYExtension.h */,
+				5E461AC2223DEFC9006D7F34 /* UIView+CFYExtension.m */,
+				5E461AC0223DEFC9006D7F34 /* UITableView+CFYTableVIewNoData.h */,
+				5E461AC3223DEFC9006D7F34 /* UITableView+CFYTableVIewNoData.m */,
+			);
+			path = PublicTableViewNoDataView;
+			sourceTree = "<group>";
+		};
 		5E7C74B5223C125900B2EB61 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				5E7C74BC223C138100B2EB61 /* SNNetworking+Group.h */,
 				5E7C74BD223C138100B2EB61 /* SNNetworking+Group.m */,
+				5E461AC7223DF39E006D7F34 /* UIViewController+Public.h */,
+				5E461AC8223DF39E006D7F34 /* UIViewController+Public.m */,
+				5E461ACA223DF43F006D7F34 /* PublicNetFailedView.h */,
+				5E461ACB223DF43F006D7F34 /* PublicNetFailedView.m */,
+				5E461ACC223DF43F006D7F34 /* PublicNetFailedView.xib */,
+				5E461ABD223DEFC9006D7F34 /* PublicTableViewNoDataView */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -189,9 +245,18 @@
 		5E7C74D5223C1FE400B2EB61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5E7C74D6223C200E00B2EB61 /* TableViewCell.h */,
-				5E7C74D7223C200E00B2EB61 /* TableViewCell.m */,
-				5E7C74D8223C200E00B2EB61 /* TableViewCell.xib */,
+				5EF59932223DB5AC00759D64 /* CookCell.h */,
+				5EF59933223DB5AC00759D64 /* CookCell.m */,
+				5EF59934223DB5AC00759D64 /* CookCell.xib */,
+				5EF5993C223DCDD000759D64 /* CookDetailHeaderCell.h */,
+				5EF5993D223DCDD000759D64 /* CookDetailHeaderCell.m */,
+				5EF5993E223DCDD000759D64 /* CookDetailHeaderCell.xib */,
+				5EF59941223DCDE300759D64 /* CookDetailCell.h */,
+				5EF59942223DCDE300759D64 /* CookDetailCell.m */,
+				5EF59943223DCDE300759D64 /* CookDetailCell.xib */,
+				5EF59946223DDB2300759D64 /* TodayCell.h */,
+				5EF59947223DDB2300759D64 /* TodayCell.m */,
+				5EF59948223DDB2300759D64 /* TodayCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +271,9 @@
 				5E7C74E5223C20AA00B2EB61 /* CookViewController.h */,
 				5E7C74ED223C20AA00B2EB61 /* CookViewController.m */,
 				5E7C74E8223C20AA00B2EB61 /* CookViewController.xib */,
+				5EF59937223DC9A800759D64 /* CookDetailViewController.h */,
+				5EF59938223DC9A800759D64 /* CookDetailViewController.m */,
+				5EF59939223DC9A800759D64 /* CookDetailViewController.xib */,
 				5E7C74F1223C20AA00B2EB61 /* TodayViewController.h */,
 				5E7C74E7223C20AA00B2EB61 /* TodayViewController.m */,
 				5E7C74EB223C20AA00B2EB61 /* TodayViewController.xib */,
@@ -396,12 +464,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF59945223DCDE300759D64 /* CookDetailCell.xib in Resources */,
+				5EF5994A223DDB2300759D64 /* TodayCell.xib in Resources */,
 				98AC12D8223BA7C5000E2A5B /* LaunchScreen.storyboard in Resources */,
 				5E7C74F3223C20AA00B2EB61 /* CookViewController.xib in Resources */,
 				5E7C74F6223C20AA00B2EB61 /* TodayViewController.xib in Resources */,
-				5E7C74DA223C200E00B2EB61 /* TableViewCell.xib in Resources */,
+				5EF5993B223DC9A800759D64 /* CookDetailViewController.xib in Resources */,
+				5EF59940223DCDD000759D64 /* CookDetailHeaderCell.xib in Resources */,
 				98AC12D5223BA7C5000E2A5B /* Assets.xcassets in Resources */,
+				5EF59936223DB5AC00759D64 /* CookCell.xib in Resources */,
 				5E7C74F7223C20AA00B2EB61 /* MenuViewController.xib in Resources */,
+				5E461ACE223DF43F006D7F34 /* PublicNetFailedView.xib in Resources */,
 				98AC12D3223BA7C4000E2A5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,15 +651,24 @@
 				5E7C74F2223C20AA00B2EB61 /* TodayViewController.m in Sources */,
 				5E7C74F8223C20AA00B2EB61 /* CookViewController.m in Sources */,
 				5E7C74BE223C138100B2EB61 /* SNNetworking+Group.m in Sources */,
+				5EF5993F223DCDD000759D64 /* CookDetailHeaderCell.m in Sources */,
+				5E461AC4223DEFC9006D7F34 /* CFYShowPlaceholderView.m in Sources */,
 				5E7C74E0223C205100B2EB61 /* Model.m in Sources */,
-				5E7C74D9223C200E00B2EB61 /* TableViewCell.m in Sources */,
 				5E7C74DD223C203F00B2EB61 /* ViewModel.m in Sources */,
+				5EF59935223DB5AC00759D64 /* CookCell.m in Sources */,
+				5EF59949223DDB2300759D64 /* TodayCell.m in Sources */,
 				5E7C74F9223C20AA00B2EB61 /* MenuViewController.m in Sources */,
 				5E7C74FC223C217800B2EB61 /* MainViewController.m in Sources */,
+				5E461AC9223DF39E006D7F34 /* UIViewController+Public.m in Sources */,
 				98AC12D0223BA7C4000E2A5B /* ViewController.m in Sources */,
+				5EF59944223DCDE300759D64 /* CookDetailCell.m in Sources */,
 				98AC12DB223BA7C5000E2A5B /* main.m in Sources */,
+				5E461ACD223DF43F006D7F34 /* PublicNetFailedView.m in Sources */,
 				98AC12CD223BA7C4000E2A5B /* AppDelegate.m in Sources */,
 				5E7C74F4223C20AA00B2EB61 /* PublicViewController.m in Sources */,
+				5EF5993A223DC9A800759D64 /* CookDetailViewController.m in Sources */,
+				5E461AC6223DEFC9006D7F34 /* UITableView+CFYTableVIewNoData.m in Sources */,
+				5E461AC5223DEFC9006D7F34 /* UIView+CFYExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,4 +23,17 @@
 	return signal;
 }
 
++ (RACSignal *)todaymonth:(NSString *)month day:(NSString *)day success:(void(^)(id responseObject))success failure:(void(^)(NSError *error))failure {
+	RACSignal * signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+		[SNNetworking getWithUrl:@"http://api.juheapi.com/japi/toh" parameters:@{@"month":month,@"key":TODAY_KEY,@"day":day,@"v":@"1.0"} progress:nil success:^(id responseObject) {
+			[subscriber sendNext:responseObject];
+			[subscriber sendCompleted];
+		} failure:^(NSError *error) {
+			[subscriber sendError:error];
+		}];
+		return nil;
+	}];
+	return signal;
+}
+
 @end

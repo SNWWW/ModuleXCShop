@@ -10,4 +10,8 @@
 
 @interface CookViewController : UIViewController
 
+@property (nonatomic, strong) RACSubject * subjectMenu;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
